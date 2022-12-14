@@ -13,10 +13,14 @@ jobs:
           pip install -r requirements.txt
           python .//src//data//make_dataset.py
           python .//src//models//train_model.py
+          python .//src//models//predict_model.py
 
           echo "## Model Metrics" > report.md
-          cat metrics.txt >> report.md
+          cat .//data//scores//metrics.txt >> report.md
 
+          echo "\n## Model Performance" >> report.md
+          echo "Confusion matrix is on the plot below." >> report.md
 
+          cml-publish .//data//scores//model_conf_matrix.png --md >> report.md
 
           cml-send-comment report.md
