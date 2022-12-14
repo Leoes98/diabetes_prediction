@@ -13,7 +13,8 @@ To see the data dictionary, you could visit: https://www.kaggle.com/datasets/whe
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── raw            <- The original, immutable data dump.
+    │   └── scores         <- Results from scoring model.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
@@ -43,7 +44,10 @@ To see the data dictionary, you could visit: https://www.kaggle.com/datasets/whe
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    ├── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── .github
+        └── workflows      <- Continuous Machine Learning (CML) folder that contains yaml file.
+            └── cml.yaml
 
 ---
 
