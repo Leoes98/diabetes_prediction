@@ -13,3 +13,10 @@ jobs:
           pip install -r requirements.txt
           python .//src//data//make_dataset.py
           python .//src//models//train_model.py
+
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
+
+
+
+          cml-send-comment report.md
